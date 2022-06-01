@@ -30,7 +30,7 @@ education:
   courses:
   - course: MSc Theoretical and Experimental Psychology
     institution: Ghent University, Ghent
-    year: Expected June 2022
+    year: Expected August 2022
   - course: Transition year to MSc Theoretical and Experimental Psychology
     institution: Ghent University, Ghent
     year: 2020
