@@ -1,10 +1,11 @@
 ---
-title: "The validation of online webcam-based eye-tracking: The replication of the cascade effect, the novelty preference, and the visual world paradigm"
+title: "Research internship"
 
-summary: This is the paper I contributed to for my Research Internship during my Masters. This paper has been submitted for review.
+summary: "In this research internship, I contributed to the project 'The validation of online webcam-based eye-tracking: The replication of the cascade effect, the novelty preference, and the visual world paradigm' by Ine Van der Cruyssen."
+
 
 tags:
-  - Webcam-based eye-tracking
+  - Research internship
 date: '2022-12-15T12:00:00Z'
 
 # Optional external URL for project (replaces project detail page).
@@ -30,7 +31,7 @@ image:
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
-slides: example
+slides: ""
 ---
 
 I contributed to this paper during my internship at the University of Amsterdam. This paper has been submitted for review.

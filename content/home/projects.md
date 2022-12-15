@@ -2,7 +2,7 @@
 # An instance of the Portfolio widget.
 # Documentation: https://wowchemy.com/docs/page-builder/
 widget: portfolio
-
+active: true
 # This file represents a page section.
 headless: true
 
@@ -30,7 +30,7 @@ content:
     - name: Master thesis
       tag: Master thesis
     - name: Research internship
-      tag: Research intership
+      tag: Research internship
 
 design:
   # Choose how many columns the section has. Valid values: '1' or '2'.
