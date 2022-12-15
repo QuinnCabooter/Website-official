@@ -30,7 +30,7 @@ education:
   courses:
   - course: MSc Theoretical and Experimental Psychology
     institution: Ghent University, Ghent
-    year: Expected August 2022
+    year: 2022
   - course: Transition year to MSc Theoretical and Experimental Psychology
     institution: Ghent University, Ghent
     year: 2020
@@ -75,4 +75,4 @@ highlight_name: true
 
 Dear visitor
 
-My name is Quinn Cabooter and I am currently a student in experimental psychology at Ghent University. I am scheduled to graduate in August 2022 and I am currently looking for PhD opportunities to continue my career in academics. You are welcome to take a look through my portfolio. Keep in mind, however, that this website is still a work in progress.
+My name is Quinn Cabooter and I am currently a research assisant at Ghent University. I graduated in August 2022 and I am currently writing a grant proposal. You are welcome to take a look through my portfolio. Keep in mind, however, that this website is still a work in progress.
