@@ -3,7 +3,7 @@ title: Master thesis
 summary: This is a short summary of the research for my Masters thesis This project was handed in August 2022.
 tags:
   - Master thesis
-date: '2022-12-12 T12:00:00Z'
+date: '2022-12-15T12:00:00Z'
 
 # Optional external URL for project (replaces project detail page).
 external_link: 'https://lib.ugent.be/nl/catalog/rug01:003012280?i=0&q=quinn+cabooter'
