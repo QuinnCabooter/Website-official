@@ -49,7 +49,7 @@ social:
 - icon: researchgate
   icon_pack: fab
   link: https://www.researchgate.net/profile/Quinn-Cabooter
-#- icon: google-scholar  # Alternatively, use `google-scholar` icon from `ai` icon pack
+#- icon: google-scholar  
  # icon_pack: ai
  # link: 
 - icon: github
