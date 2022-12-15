@@ -38,15 +38,20 @@ experience:
         * Teamwork
         * Presentations
         
-  # - title: Professor of Semiconductor Physics
-  #   company: University X
-  #   company_url: ''
-  #   company_logo: org-x
-  #   location: California
-  #   date_start: '2016-01-01'
-  #   date_end: '2020-12-31'
-  #   description: Taught electronic engineering and researched semiconductor physics.
+  - title: Research assistant
+    company: Ghent University
+    company_url: ''
+    company_logo: ugent
+    location: Ghent
+    date_start: '2022-10-01'
+    date_end: '2023-10-31'
+    description: |2-
+      * Conducting research 
+      * writing manuscripts 
+      * writing grant proposal 
+      * conducting experiments 
+      * analyses
 
 design:
-  columns: '1'
+  columns: '2'
 ---

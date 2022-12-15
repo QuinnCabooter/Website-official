@@ -29,8 +29,8 @@ content:
       tag: '*'
     - name: Master thesis
       tag: Master thesis
-    - name: Other
-      tag: Demo
+    - name: Research internship
+      tag: Research intership
 
 design:
   # Choose how many columns the section has. Valid values: '1' or '2'.
