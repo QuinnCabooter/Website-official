@@ -49,16 +49,16 @@ social:
 - icon: researchgate
   icon_pack: fab
   link: https://www.researchgate.net/profile/Quinn-Cabooter
-- icon: google-scholar  # Alternatively, use `google-scholar` icon from `ai` icon pack
-  icon_pack: ai
-  link: 
+#- icon: google-scholar  # Alternatively, use `google-scholar` icon from `ai` icon pack
+ # icon_pack: ai
+ # link: 
 - icon: github
   icon_pack: fab
   link: https://github.com/quinncabooter
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/quinn-cabooter/
-  
+
 - icon: orcid
   icon_pack: ai
   link: https://orcid.org/0000-0003-0479-6563
