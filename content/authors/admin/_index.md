@@ -6,7 +6,7 @@ title: Quinn Cabooter
 superuser: true
 
 # Role/position/tagline
-role: Researcher, Student experimental psychology
+role: Research assistant
 
 # Organizations/Affiliations to show in About widget
 organizations:
@@ -28,13 +28,13 @@ interests:
 # Education to show in About widget
 education:
   courses:
-  - course: MSc Theoretical and Experimental Psychology
+  - course: MSc Theoretical and Experimental Psychology (Magna cum laude)
     institution: Ghent University, Ghent
     year: 2022
-  - course: Transition year to MSc Theoretical and Experimental Psychology
+  - course: Transition year to MSc Theoretical and Experimental Psychology (Summa cum laude)
     institution: Ghent University, Ghent
     year: 2020
-  - course: Ba Applied Psychology
+  - course: Ba Applied Psychology (Cum laude)
     institution: Hogeschool West-Vlaanderen, Bruges
     year: 2019
 
@@ -58,6 +58,10 @@ social:
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/quinn-cabooter/
+  
+- icon: orcid
+  icon_pack: ai
+  link: https://orcid.org/0000-0003-0479-6563
 
 # Link to a PDF of your resume/CV.
 # To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.toml`, 

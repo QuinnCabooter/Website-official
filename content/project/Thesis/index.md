@@ -1,12 +1,12 @@
 ---
 title: Master thesis
-summary: This is a short summary of the research for my Masters thesis which is still ongoing. This project is sheduled to be handed it in August 2022.
+summary: This is a short summary of the research for my Masters thesis This project was handed in August 2022.
 tags:
   - Master thesis
-date: '2022-04-30T20:00:00Z'
+date: '2022-12-12 T12:00:00Z'
 
 # Optional external URL for project (replaces project detail page).
-external_link: ''
+external_link: 'https://lib.ugent.be/nl/catalog/rug01:003012280?i=0&q=quinn+cabooter'
 
 image:
   caption: Photo by Shutterstock
@@ -31,4 +31,4 @@ image:
 slides: example
 ---
 
-The ability to inhibit unwanted actions (response inhibition) is considered crucial for goal-directed behaviour and essential to day-to-day life. The success of inhibition has been shown to be affected by Locus Coeruleus activity following an inverted U-shape: people tend to inhibit their responses better when Locus Coeruleus activity is moderately high. Although increases in Locus Coeruleus activity have been reliably indexed by pupil dilation, very little research has focused on the relationship between pupil size and the success of inhibition. Therefore, my master thesis aims to examine whether (and to what extent) pupil size is predictive of successful inhibition.
+The ability to inhibit unwanted actions (response inhibition) is considered crucial for goal-directed behaviour and essential to day-to-day life. The success of inhibition has been shown to be affected by Locus Coeruleus activity following an inverted U-shape: people tend to inhibit their responses better when Locus Coeruleus activity is moderately high. Although increases in Locus Coeruleus activity have been reliably indexed by pupil dilation, very little research has focused on the relationship between pupil size and the success of inhibition. Therefore, my master thesis aimed to examine whether (and to what extent) pupil size is predictive of successful inhibition.
