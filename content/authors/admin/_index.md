@@ -31,7 +31,7 @@ education:
   - course: MSc Theoretical and Experimental Psychology (Magna cum laude)
     institution: Ghent University, Ghent
     year: 2022
-  - course: Transition year to MSc Theoretical and Experimental Psychology (Summa cum laude)
+  - course: Transition year to MSc Theoretical and Experimental Psychology (Magna cum laude)
     institution: Ghent University, Ghent
     year: 2020
   - course: Ba Applied Psychology (Cum laude)
