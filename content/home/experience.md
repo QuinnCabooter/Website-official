@@ -31,12 +31,13 @@ experience:
     date_end: '2022-02-18'
     description: |2-
         Responsibilities include:
-        
-        * Analysing
         * Developing experiments
         * Conducting experiments
-        * Teamwork
+        * Analysing data
+        * Working in a research lab
         * Presentations
+        * Paper review
+        * Participating in a multi-lab international study
         
   - title: Research assistant
     company: Ghent University
@@ -46,11 +47,13 @@ experience:
     date_start: '2022-10-01'
     date_end: '2023-10-31'
     description: |2-
+      Responsibilities include:
       * Conducting research 
-      * writing manuscripts 
-      * writing grant proposal 
-      * conducting experiments 
-      * analyses
+      * Writing manuscripts 
+      * Writing a grant proposal 
+      * Conducting experiments 
+      * Analysing data
+      * Presentations
 
 design:
   columns: '2'
