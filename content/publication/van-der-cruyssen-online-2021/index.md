@@ -45,8 +45,8 @@ featured: true
 
 # Custom links (uncomment lines below)
 # links:
-- name: Open science framework
-   url: https://osf.io/p4hz7/
+# - name: Open science framework
+#    url: 'https://osf.io/p4hz7/'
 
 # url_pdf: ''
 # url_code: ''
