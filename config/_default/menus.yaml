@@ -10,17 +10,17 @@ main:
   - name: Experience
     url: '#experience'
     weight: 20
-  - name: Publications
-    url: '#publications'
-    weight: 30
   - name: Skills
     url: '#skills'
+    weight: 30
+  - name: Publications
+    url: '#publications'
     weight: 40
-  - name: Accomplishments
-    url: '#accomplishments'
-    weight: 50
   - name: Projects
     url: '#projects'
+    weight: 50
+  - name: Accomplishments
+    url: '#accomplishments'
     weight: 60
   - name: Contact
     url: '#contact'
