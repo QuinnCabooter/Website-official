@@ -28,7 +28,7 @@ image:
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
-slides: example
+slides: ""
 ---
 
 The ability to inhibit unwanted actions (response inhibition) is considered crucial for goal-directed behaviour and essential to day-to-day life. The success of inhibition has been shown to be affected by Locus Coeruleus activity following an inverted U-shape: people tend to inhibit their responses better when Locus Coeruleus activity is moderately high. Although increases in Locus Coeruleus activity have been reliably indexed by pupil dilation, very little research has focused on the relationship between pupil size and the success of inhibition. Therefore, my master thesis aimed to examine whether (and to what extent) pupil size is predictive of successful inhibition.
