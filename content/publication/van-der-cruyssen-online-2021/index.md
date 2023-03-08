@@ -19,7 +19,7 @@ authors:
 # - "Equal contribution"
 
 date: "2022-10-12"
-doi: ""
+doi: "DOI 10.17605/OSF.IO/P4HZ7"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2022-12-15 T12:00:00Z"
@@ -45,8 +45,8 @@ featured: true
 
 # Custom links (uncomment lines below)
 # links:
-# - name: Custom Link
-#   url: http://example.org
+- name: Open science framework
+   url: https://osf.io/p4hz7/
 
 # url_pdf: ''
 # url_code: ''
@@ -80,9 +80,9 @@ projects:
 # slides: 
 ---
 
-{{% callout note %}}
+<!-- {{% callout note %}}
 Click the *Cite* button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-{{% /callout %}}
+{{% /callout %}} -->
 
 <!-- {{% callout note %}}
 Create your slides in Markdown - click the *Slides* button to check out the example.
