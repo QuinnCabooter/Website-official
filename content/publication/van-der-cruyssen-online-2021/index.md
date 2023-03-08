@@ -19,7 +19,7 @@ authors:
 # - "Equal contribution"
 
 date: "2022-10-12"
-doi: "https://osf.io/p4hz7/"
+doi: ""
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2022-12-15 T12:00:00Z"

@@ -34,7 +34,7 @@ image:
 slides: ""
 ---
 
-During my internship at the University of Amsterdam, I contributed to the following paper: "The validation of online webcam-based eye-tracking: The replication of the cascade effect, the novelty preference, and the visual world paradigm". My contributions include: task design and programming, data acquisition, data analyses, and reporting results for both the novelty preference and the visual world paradigm parts. 
+During my internship at the University of Amsterdam, I contributed to the following paper: "The validation of online webcam-based eye-tracking: The replication of the cascade effect, the novelty preference, and the visual world paradigm" (submitted). My contributions include: task design and programming, data acquisition, data analyses, and reporting results for both the novelty preference and the visual world paradigm parts. 
 
 Authors: 
 Ine Van der Cruyssen,Gershon Ben-Shakhar, Yoni Pertzov, Nitzan Guy, Quinn Cabooter, Lukas J. Gunschera, & Bruno Verschuere
