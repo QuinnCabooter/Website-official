@@ -32,6 +32,10 @@ feature:
   icon: python
   icon_pack: fab
   name: Python
+- desription:
+  icon: overleaf
+  icon_pack: ai
+  name: LaTeX/Overleaf
 
 # Uncomment to use emoji icons.
 #- icon: ":smile:"
