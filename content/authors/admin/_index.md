@@ -13,17 +13,17 @@ organizations:
 - name: Ghent University
   url: https://www.ugent.be
 
-- name: University of Amsterdam
-  url: https://www.uva.nl
+#- name: University of Amsterdam
+#  url: https://www.uva.nl
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include eye tracking and neuroscience.
+bio: Theoretical and experimental psychologist with a passion for neuroscience and eye tracking.
 
 # Interests to show in About widget
 interests:
 - Eye tracking
 - Neuroscience
-- Forensic psychology
+- Theoretical and experimental psychology
 
 # Education to show in About widget
 education:
@@ -82,4 +82,4 @@ highlight_name: true
 
 Dear visitor
 
-My name is Quinn Cabooter and I am currently a research assisant at Ghent University. I graduated in August 2022 and I am currently writing a grant proposal. You are welcome to take a look through my portfolio. Keep in mind, however, that this website is still a work in progress.
+My name is Quinn Cabooter and I am currently a research assisant at Ghent University. I graduated as Master in Theoretical and Experimental Psychology in August 2022. Recently, I submitted a PhD grant proposal. Awaiting the results, I am performing research experiments for the lab of Prof. Nico Boehler, I am writing a review article and I am in the process of submitting the results of my Master thesis for publication. Results, findings and publications from my research will be communicated via this platform. Feel free to browse around!
