@@ -37,8 +37,8 @@ feature:
   icon_pack: ai
   name: LaTeX/Overleaf
 - description: 
-  icon:eeg
-  icon_pack:
+  icon: eeg
+  icon_pack: custom
   name: Electroencephalography
 # Uncomment to use emoji icons.
 #- icon: ":smile:"
