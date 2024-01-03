@@ -55,6 +55,14 @@ experience:
       * Analysing data
       * Presentations
 
+  - title: Research assistant
+    company: imec-mict-ugent
+    company_url: ''
+    company_logo: imec
+    location: Ghent
+    date_start: '2023-01-01'
+    date_end: 
+
 design:
   columns: '2'
 ---
