@@ -18,7 +18,7 @@ authors:
 # - "Equal contribution"
 # - "Equal contribution"
 
-date: "2022-10-12"
+date: "2023-30-08"
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
@@ -28,25 +28,25 @@ publishDate: "2022-12-15 T12:00:00Z"
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
 # 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
 # 7 = Thesis; 8 = Patent
-publication_types: ["3"]
+publication_types: ["2"]
 
 # Publication name and optional abbreviated publication name.
-publication: Under review
-publication_short: 
+publication: Behavior Research Methods
+publication_short: BRM
 
 abstract: The many benefits of online research and the recent emergence of open-source eyetracking libraries have sparked the interest in transferring time-consuming and expensive eyetracking studies from lab to web. In the current study, we validate online webcam-based eyetracking by replicating three robust eye-tracking studies (the cascade effect, n = 134, the novelty preference, n = 45, and the visual world paradigm, n = 32) online using the participant's webcam as eye-tracker with the WebGazer.js library. We successfully replicated all three effects, although the effect sizes of all three studies shrank by 20 to 27%. The visual world paradigm was not only conducted online but also in the lab, using the same participants and a standard laboratory eye-tracker. This showed that replication per se could not fully account for the effect size shrinkage, but that the shrinkage is also due to the use of online webcam-based eyetracking, which is noisier. In conclusion, we argue that eye-tracking studies with relatively large effects that do not require extremely high precision (e.g., studies with 4 or fewer large regions of interest) can be done online using the participant’s webcam. We also make recommendations for how the quality of online webcam-based eye-tracking could be improved.
 
 # Summary. An optional shortened abstract.
 #summary: 
-tags: []
+tags: [Cascade effect; Novelty preference; Online studies; Visual world paradigm; Eye-tracking.]
 
 # Display this page in the Featured widget?
 featured: true
 
 # Custom links (uncomment lines below)
-# links:
-# - name: Open science framework
-#    url: 'https://osf.io/p4hz7/'
+links:
+ - name: Open science framework
+ - url: 'https://pubmed.ncbi.nlm.nih.gov/37648844/'
 
 # url_pdf: ''
 # url_code: ''
