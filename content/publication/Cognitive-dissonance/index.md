@@ -7,9 +7,9 @@ title: "A Multilab Replication of the Induced-Compliance Paradigm of Cognitive D
 authors:
 - David C. Vaidis
 - Willem W.A. Sleegers
-- Other...
+- Others
 - admin
-- Other... 
+- Others
 - Daniel Priolo
 
 # Author notes (optional)
