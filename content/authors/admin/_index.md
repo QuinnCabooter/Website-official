@@ -6,18 +6,18 @@ title: Quinn Cabooter
 superuser: true
 
 # Role/position/tagline
-role: Research assistant
+role: Junior Researcher
 
 # Organizations/Affiliations to show in About widget
 organizations:
-- name: Ghent University
-  url: https://www.ugent.be
+- name: imec-mict-UGent
+  url: https://www.ugent.be/mict/en/about
 
 #- name: University of Amsterdam
 #  url: https://www.uva.nl
 
 # Short bio (displayed in user profile at end of posts)
-bio: Theoretical and experimental psychologist with a passion for neuroscience and eye tracking.
+bio: Theoretical and experimental psychologist.
 
 # Interests to show in About widget
 interests:
