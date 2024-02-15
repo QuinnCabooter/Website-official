@@ -6,7 +6,7 @@ title: Quinn Cabooter
 superuser: true
 
 # Role/position/tagline
-role: Junior Researcher
+role: Junior Research
 
 # Organizations/Affiliations to show in About widget
 organizations:
@@ -17,7 +17,7 @@ organizations:
 #  url: https://www.uva.nl
 
 # Short bio (displayed in user profile at end of posts)
-bio: Theoretical and experimental psychologist.
+bio: MSc. Theoretical and experimental psychology.
 
 # Interests to show in About widget
 interests:
