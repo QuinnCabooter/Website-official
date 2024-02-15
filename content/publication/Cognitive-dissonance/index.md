@@ -8,7 +8,7 @@ authors:
 - David C. Vaidis
 - Willem W.A. Sleegers
 - admin
-- [...]
+- Etc. 
 - Daniel Priolo
 
 # Author notes (optional)
