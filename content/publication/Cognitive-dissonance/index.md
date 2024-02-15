@@ -8,7 +8,7 @@ authors:
 - David C. Vaidis
 - Willem W.A. Sleegers
 - admin
-- Test McTest
+- [...]
 - Daniel Priolo
 
 # Author notes (optional)
