@@ -84,7 +84,7 @@ Dear visitor
 
 My name is Quinn Cabooter, and I am currently a junior researcher at imec-mict-UGent. I graduated as Master in 
 Theoretical and Experimental Psychology in August 2022. 
-In the future I will be working as a doctoral fellow on neural markers of mid-air haptics for objective user testing & validation
+In the future I will be working as a doctoral fellow on neural markers of mid-air haptics for objective user testing & validation.
 
 Results, findings and publications from my research will be communicated via this platform. 
 Feel free to browse around!
