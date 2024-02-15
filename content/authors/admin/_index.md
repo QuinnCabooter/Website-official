@@ -82,4 +82,9 @@ highlight_name: true
 
 Dear visitor
 
-My name is Quinn Cabooter and I am currently a research assisant at Ghent University. I graduated as Master in Theoretical and Experimental Psychology in August 2022. Recently, I submitted a PhD grant proposal. Awaiting the results, I am performing research experiments for the lab of Prof. Nico Boehler, I am writing a review article and I am in the process of submitting the results of my Master thesis for publication. Results, findings and publications from my research will be communicated via this platform. Feel free to browse around!
+My name is Quinn Cabooter, and I am currently a junior researcher at imec-mict-UGent. I graduated as Master in 
+Theoretical and Experimental Psychology in August 2022. 
+In the future I will be working as a doctoral fellow on neural markers of mid-air haptics for objective user testing & validation
+
+Results, findings and publications from my research will be communicated via this platform. 
+Feel free to browse around!
