@@ -45,8 +45,9 @@ featured: true
 
 # Custom links (uncomment lines below)
 links:
- - name: PubMed
-   url: 'https://pubmed.ncbi.nlm.nih.gov/37648844/'
+- name: "Pubmed"
+  url: "https://pubmed.ncbi.nlm.nih.gov/37648844/"
+
 
 # url_pdf: ''
 # url_code: ''
