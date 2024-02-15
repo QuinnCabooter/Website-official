@@ -45,7 +45,7 @@ featured: true
 
 # Custom links (uncomment lines below)
 links:
- - name: Open science framework
+ - name: PubMed
  - url: 'https://pubmed.ncbi.nlm.nih.gov/37648844/'
 
 # url_pdf: ''
