@@ -41,7 +41,7 @@ abstract: The many benefits of online research and the recent emergence of open-
 tags: [Cascade effect; Novelty preference; Online studies; Visual world paradigm; Eye-tracking.]
 
 # Display this page in the Featured widget?
-featured: true
+featured: false
 
 # Custom links (uncomment lines below)
 links:
