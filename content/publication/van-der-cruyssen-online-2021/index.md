@@ -49,7 +49,7 @@ links:
   url: "https://pubmed.ncbi.nlm.nih.gov/37648844/"
 
 
-# url_pdf: ''
+url_pdf: 'https://link.springer.com/article/10.3758/s13428-023-02221-2'
 # url_code: ''
 # url_dataset: ''
 # url_poster: ''
