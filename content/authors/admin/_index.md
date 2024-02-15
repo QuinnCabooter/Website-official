@@ -6,7 +6,7 @@ title: Quinn Cabooter
 superuser: true
 
 # Role/position/tagline
-role: Junior Research
+role: Junior Researcher
 
 # Organizations/Affiliations to show in About widget
 organizations:
