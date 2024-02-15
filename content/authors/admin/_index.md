@@ -21,7 +21,7 @@ bio: MSc. Theoretical and experimental psychology.
 
 # Interests to show in About widget
 interests:
-- Eye tracking
+- R&D
 - Neuroscience
 - Theoretical and experimental psychology
 
