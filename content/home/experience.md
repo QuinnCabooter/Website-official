@@ -55,13 +55,20 @@ experience:
       * Analysing data
       * Presentations
 
-  - title: Research assistant
-    company: imec-mict-ugent
+  - title: Research fellow
+    company: imec-mict-UGent
     company_url: ''
     company_logo: imec
     location: Ghent
-    date_start: '2023-01-01'
-    date_end: 
+    date_start: '2024-01-01'
+    date_end: '2024-06-30'
+
+  - title: Doctoral researcher
+    company: imec-mict-UGent
+    company_logo: imec
+    location: Ghent
+    date_start: '2024-07-01'
+    date_end:
 
 design:
   columns: '2'

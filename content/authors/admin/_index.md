@@ -6,7 +6,7 @@ title: Quinn Cabooter
 superuser: true
 
 # Role/position/tagline
-role: Junior Researcher
+role: Doctoral Researcher
 
 # Organizations/Affiliations to show in About widget
 organizations:
@@ -82,9 +82,9 @@ highlight_name: true
 
 Dear visitor
 
-My name is Quinn Cabooter, and I am currently a junior researcher at imec-mict-UGent. I graduated as Master in 
+My name is Quinn Cabooter, and I am currently a doctoral researcher at imec-mict-UGent. I graduated as Master in 
 Theoretical and Experimental Psychology in August 2022. 
-In the future I will be working as a doctoral fellow on neural markers of mid-air haptics for objective user testing & validation.
+My research focusses on the neural markers of mid-air haptics for objective user testing & validation.
 
 Results, findings and publications from my research will be communicated via this platform. 
 Feel free to browse around!
