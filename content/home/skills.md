@@ -37,8 +37,8 @@ feature:
   icon_pack: ai
   name: LaTeX/Overleaf
 - descripition:
-  icon: custom/arduino.svg
-  icon_pack: custom
+  icon: arduino
+  icon_pack: "custom"
   name: Arduino
 #- description: 
 #  icon: eeg
