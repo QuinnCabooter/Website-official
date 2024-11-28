@@ -16,7 +16,7 @@ author_notes:
  - "Shared first author"
  - "Shared first author"
 
-date: "2024-12-01"
+date: "2024-11-01"
 doi: "10.1111/psyp.14738"
 
 # Schedule page publish date (NOT publication's date).
