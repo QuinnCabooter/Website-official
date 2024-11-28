@@ -12,7 +12,7 @@ authors:
 - Nico C. Boehler
 
 # Author notes (optional)
-# author_notes:
+author_notes:
  - "Shared first author"
  - "Shared first author"
 
