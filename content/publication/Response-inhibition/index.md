@@ -16,7 +16,7 @@ author_notes:
  - "Shared first author"
  - "Shared first author"
 
-date: "2024-02-05"
+date: "2024-12-01"
 doi: "10.1111/psyp.14738"
 
 # Schedule page publish date (NOT publication's date).
@@ -29,7 +29,7 @@ publishDate: "2022-12-15 T12:00:00Z"
 publication_types: ["2"]
 
 # Publication name and optional abbreviated publication name.
-publication: Psychophysiology
+Journal: Psychophysiology
 publication_short: 
 
 abstract: "Response inhibition is key to flexible behavior. Importantly, performance in any task, including response

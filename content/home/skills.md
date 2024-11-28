@@ -40,10 +40,14 @@ feature:
   icon: arduino
   icon_pack: "custom"
   name: Arduino
-#- description: 
-#  icon: eeg
-#  icon_pack: custom
-#  name: Electroencephalography
+- description:
+  icon: Unity
+  icon_pack: "custom"
+  name: Unity
+- description:
+  icon: Csharp
+  icon_pack: "custom"
+  name: C#
 # Uncomment to use emoji icons.
 #- icon: ":smile:"
 #  icon_pack: "emoji"
