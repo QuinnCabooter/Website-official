@@ -48,6 +48,10 @@ feature:
   icon: Csharp
   icon_pack: "custom"
   name: C#
+- desctription:
+  icon: eeg
+  icon_pack: "custom"
+  name: EEG
 # Uncomment to use emoji icons.
 #- icon: ":smile:"
 #  icon_pack: "emoji"
