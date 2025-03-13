@@ -49,7 +49,7 @@ feature:
   icon_pack: "custom"
   name: C#
 - desctription:
-  icon: brainblue
+  icon: brain-solid
   icon_pack: "custom"
   name: EEG
 # Uncomment to use emoji icons.
