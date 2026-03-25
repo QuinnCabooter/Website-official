@@ -405,10 +405,14 @@ body.page-home main#home .container.narrow {
 
 .eyebrow {
   text-transform: uppercase;
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   letter-spacing: 0.08em;
   color: rgba(156, 191, 255, 0.7);
   font-weight: 700;
+  margin: 0;              /* avoids default p margins */
+  max-width: 54ch;       /* forces nicer wrapping; keeps all text */
+  white-space: normal;   /* make wrapping explicit */
+  line-height: 1.35;    /* improves readability when it becomes 2 lines */
 }
 
 .bio-intro {
@@ -633,10 +637,20 @@ select {
 }
 
 .pub-card .pub-links a {
-  color: rgba(238, 244, 255, 0.9);
+  color: var(--brand);
 }
 
 .pub-card .pub-links a:hover {
+  color: var(--brand-strong);
+  text-decoration: none;
+}
+
+/* Publication card titles back to default (white) */
+.pub-card h3 a {
+  color: var(--text);
+}
+
+.pub-card h3 a:hover {
   color: var(--brand-strong);
   text-decoration: none;
 }

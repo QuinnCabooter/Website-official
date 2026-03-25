@@ -6,13 +6,13 @@
       {{ $p := .RelPermalink }}
       <li><a href="/" {{ if eq $p "/" }}aria-current="page"{{ end }}>About</a></li>
       <li>
+        <a href="/experience/" {{ if or (hasPrefix $p "/experience/") (eq $p "/experience/") }}aria-current="page"{{ end }}>Experience</a>
+      </li>
+      <li>
         <a href="/research/" {{ if or (hasPrefix $p "/research/") (eq $p "/research/") }}aria-current="page"{{ end }}>Research</a>
       </li>
       <li>
         <a href="/publications/" {{ if or (hasPrefix $p "/publications/") (eq $p "/publications/") }}aria-current="page"{{ end }}>Publications</a>
-      </li>
-      <li>
-        <a href="/experience/" {{ if or (hasPrefix $p "/experience/") (eq $p "/experience/") }}aria-current="page"{{ end }}>Experience</a>
       </li>
       <li>
         <a href="/conferences/" {{ if or (hasPrefix $p "/conferences/") (eq $p "/conferences/") }}aria-current="page"{{ end }}>Conferences</a>
