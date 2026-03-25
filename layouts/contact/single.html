@@ -1,7 +1,13 @@
 {{ define "main" }}
 {{ $contact := site.Data.contact }}
 <section class="section">
-  <div class="container narrow">
+  <div class="container narrow section-title-wrap">
+    <img
+      class="section-title-icon"
+      src="{{ .Params.title_icon | default site.Data.profile.portrait }}"
+      alt=""
+      aria-hidden="true"
+    />
     {{ partial "page_title.html" (dict "ctx" . "title" .Title "subtitle" (.Content | plainify)) }}
   </div>
 </section>

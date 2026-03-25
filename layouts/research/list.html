@@ -3,7 +3,7 @@
   <div class="container narrow section-title-wrap">
     <img
       class="section-title-icon"
-      src="{{ site.Data.profile.research_portrait | default site.Data.profile.portrait }}"
+      src="{{ .Params.title_icon | default site.Data.profile.research_portrait | default site.Data.profile.portrait }}"
       alt=""
       aria-hidden="true"
     />
