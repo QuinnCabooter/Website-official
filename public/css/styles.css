@@ -258,7 +258,7 @@ body.page-home main#home .container.narrow {
   background-repeat: no-repeat;
   border-bottom: 1px solid var(--border);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .site-header.site-header--scrolled {
