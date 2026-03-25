@@ -1,0 +1,74 @@
+{{ define "main" }}
+<section class="section">
+  <div class="container narrow section-title-wrap">
+    <img
+      class="section-title-icon"
+      src="{{ .Params.title_icon | default site.Data.profile.portrait }}"
+      alt=""
+      aria-hidden="true"
+    />
+    {{ partial "page_title.html" (dict "ctx" . "title" .Title "subtitle" (.Content | plainify)) }}
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    {{ $now := now }}
+    {{ $upcoming := where .Pages "Date" "ge" $now }}
+    {{ $past := where .Pages "Date" "lt" $now }}
+
+    <div class="section-heading">
+      <h2>Upcoming</h2>
+      <div></div>
+    </div>
+
+    {{ if gt (len $upcoming) 0 }}
+      <div class="cards">
+        {{ range $upcoming.ByDate }}
+        <article class="card conf-card conf-card--upcoming">
+          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <p class="pub-meta">
+            <span class="tag conf-status">Upcoming</span>
+            {{ with .Params.venue }}<span class="conf-venue">{{ . }}</span>{{ end }}
+            {{ with .Date }} · {{ .Format "Jan 2, 2006" }}{{ end }}
+          </p>
+          {{ with .Params.summary }}<p>{{ . }}</p>{{ end }}
+          {{ with .Params.link }}
+            <p class="pub-links"><a href="{{ . }}" target="_blank" rel="noreferrer">Details</a></p>
+          {{ end }}
+        </article>
+        {{ end }}
+      </div>
+    {{ else }}
+      <p class="empty-state">No upcoming conferences planned.</p>
+    {{ end }}
+
+    <div class="section-heading" style="margin-top: 1.25rem;">
+      <h2>Past</h2>
+      <div></div>
+    </div>
+
+    {{ if gt (len $past) 0 }}
+      <div class="cards">
+        {{ range $past.ByDate.Reverse }}
+        <article class="card conf-card">
+          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <p class="pub-meta">
+            {{ with .Params.status }}<span class="tag conf-status">{{ . }}</span>{{ end }}
+            {{ with .Params.venue }}<span class="conf-venue">{{ . }}</span>{{ end }}
+            {{ with .Date }} · {{ .Format "Jan 2, 2006" }}{{ end }}
+          </p>
+          {{ with .Params.summary }}<p>{{ . }}</p>{{ end }}
+          {{ with .Params.link }}
+            <p class="pub-links"><a href="{{ . }}" target="_blank" rel="noreferrer">Details</a></p>
+          {{ end }}
+        </article>
+        {{ end }}
+      </div>
+    {{ else }}
+      <p class="empty-state">No past conferences yet.</p>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+

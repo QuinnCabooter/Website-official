@@ -8,7 +8,7 @@
   --brand: #7ea7f0; /* primary accent (blue) */
   --brand-strong: #9cc2ff;
   --accent: #63c7b2; /* secondary accent (muted teal) */
-  --border: rgba(233, 238, 248, 0.12);
+  --border: rgba(43, 223, 232, 0.231);
   --shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
   --shadow-soft: 0 16px 44px rgba(0, 0, 0, 0.22);
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
@@ -276,7 +276,7 @@ body.page-home main#home .container.narrow {
   background: linear-gradient(
     90deg,
     rgba(126, 167, 240, 0),
-    rgba(99, 199, 178, 0.7),
+    rgba(43, 223, 232, 0.55),
     rgba(156, 191, 255, 0)
   );
   opacity: 0.65;
@@ -293,7 +293,7 @@ body.page-home main#home .container.narrow {
   background: linear-gradient(
     90deg,
     rgba(126, 167, 240, 0),
-    rgba(99, 199, 178, 0.55),
+    rgba(43, 223, 232, 0.55),
     rgba(156, 191, 255, 0)
   );
   opacity: 0.45;
@@ -364,7 +364,7 @@ body.page-home main#home .container.narrow {
   background: linear-gradient(
     90deg,
     rgba(99, 199, 178, 0),
-    rgba(99, 199, 178, 0.7),
+    rgba(43, 223, 232, 0.701),
     rgba(99, 199, 178, 0)
   );
   transform: scaleX(0);
@@ -641,6 +641,43 @@ select {
   text-decoration: none;
 }
 
+.conf-venue {
+  color: rgba(185, 198, 222, 0.95);
+}
+
+.conf-status {
+  margin-right: 0.35rem;
+  border: 1px solid rgba(99, 199, 178, 0.28);
+  background: rgba(99, 199, 178, 0.12);
+  color: rgba(156, 191, 255, 0.92);
+}
+
+.exp-company {
+  color: rgba(238, 244, 255, 0.92);
+  font-weight: 650;
+}
+
+.exp-location {
+  color: rgba(185, 198, 222, 0.95);
+}
+
+.conf-card--upcoming {
+  border-color: rgba(99, 199, 178, 0.28);
+}
+
+.conf-card--upcoming:hover {
+  border-color: rgba(99, 199, 178, 0.4);
+}
+
+.empty-state {
+  margin: 0.75rem 0 0;
+  color: rgba(185, 198, 222, 0.92);
+  background: rgba(20, 34, 58, 0.35);
+  border: 1px dashed rgba(233, 238, 248, 0.14);
+  border-radius: 0.9rem;
+  padding: 0.9rem 1rem;
+}
+
 .contact-links {
   margin: 1rem 0 0;
   display: flex;
@@ -780,10 +817,11 @@ select {
 
 .site-footer {
   border-top: 1px solid var(--border);
-  padding: 2rem 0;
+  padding: 1rem 0;
   color: var(--muted);
   font-size: 0.95rem;
   margin-top: auto; /* push footer to bottom in short pages */
+  text-align: center;
 }
 
 @media (max-width: 920px) {

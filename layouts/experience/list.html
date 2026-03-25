@@ -1,0 +1,40 @@
+{{ define "main" }}
+<section class="section">
+  <div class="container narrow section-title-wrap">
+    <img
+      class="section-title-icon"
+      src="{{ .Params.title_icon | default site.Data.profile.portrait }}"
+      alt=""
+      aria-hidden="true"
+    />
+    {{ partial "page_title.html" (dict "ctx" . "title" .Title "subtitle" (.Content | plainify)) }}
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Overview</h2>
+      <div></div>
+    </div>
+
+    <div class="cards">
+      {{ range (sort .Pages "Params.date_start" "desc") }}
+      <article class="card exp-card">
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p class="pub-meta">
+          {{ with .Params.company }}<span class="exp-company">{{ . }}</span>{{ end }}
+          {{ with .Params.location }} · <span class="exp-location">{{ . }}</span>{{ end }}
+        </p>
+        <p class="pub-meta">
+          {{ with .Params.date_start }}{{ (time .).Format "Jan 2006" }}{{ end }}
+          {{ with .Params.date_end }} – {{ (time .).Format "Jan 2006" }}{{ else }} – Present{{ end }}
+        </p>
+        {{ with .Params.summary }}<p>{{ . }}</p>{{ end }}
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+

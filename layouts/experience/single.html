@@ -1,0 +1,22 @@
+{{ define "main" }}
+<section class="section">
+  <div class="container narrow section-title-wrap">
+    <img
+      class="section-title-icon"
+      src="{{ .Params.title_icon | default site.Data.profile.portrait }}"
+      alt=""
+      aria-hidden="true"
+    />
+    {{ partial "page_title.html" (dict "ctx" . "title" .Title "subtitle" (.Params.company | default "")) }}
+
+    <div class="pub-meta">
+      {{ with .Params.location }}<span class="exp-location">{{ . }}</span>{{ end }}
+      {{ with .Params.date_start }} · {{ (time .).Format "Jan 2006" }}{{ end }}
+      {{ with .Params.date_end }} – {{ (time .).Format "Jan 2006" }}{{ else }} – Present{{ end }}
+    </div>
+
+    {{ if .Content }}<div class="publication-detail__abstract">{{ .Content }}</div>{{ end }}
+  </div>
+</section>
+{{ end }}
+

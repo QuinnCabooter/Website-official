@@ -11,6 +11,12 @@
       <li>
         <a href="/publications/" {{ if or (hasPrefix $p "/publications/") (eq $p "/publications/") }}aria-current="page"{{ end }}>Publications</a>
       </li>
+      <li>
+        <a href="/experience/" {{ if or (hasPrefix $p "/experience/") (eq $p "/experience/") }}aria-current="page"{{ end }}>Experience</a>
+      </li>
+      <li>
+        <a href="/conferences/" {{ if or (hasPrefix $p "/conferences/") (eq $p "/conferences/") }}aria-current="page"{{ end }}>Conferences</a>
+      </li>
       <li><a href="/contact/" {{ if eq $p "/contact/" }}aria-current="page"{{ end }}>Contact</a></li>
     </ul>
   </nav>
