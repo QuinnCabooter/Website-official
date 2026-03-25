@@ -10,7 +10,7 @@
     {{ partial "page_title.html" (dict "ctx" . "title" .Title "subtitle" (.Date.Format "Jan 2, 2006")) }}
 
     <div class="pub-meta">
-      {{ with .Params.status }}<span class="tag conf-status">{{ . }}</span>{{ end }}
+      {{ if ge .Date now }}<span class="tag conf-status">Upcoming</span>{{ end }}
       {{ with .Params.venue }}<span class="conf-venue">{{ . }}</span>{{ end }}
       {{ with .Params.link }} · <a href="{{ . }}" target="_blank" rel="noreferrer">Conference link</a>{{ end }}
     </div>

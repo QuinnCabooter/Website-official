@@ -54,7 +54,6 @@
         <article class="card conf-card">
           <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
           <p class="pub-meta">
-            {{ with .Params.status }}<span class="tag conf-status">{{ . }}</span>{{ end }}
             {{ with .Params.venue }}<span class="conf-venue">{{ . }}</span>{{ end }}
             {{ with .Date }} · {{ .Format "Jan 2, 2006" }}{{ end }}
           </p>
