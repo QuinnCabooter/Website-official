@@ -79,19 +79,6 @@
         </div>
       </form>
     </div>
-
-    {{- if gt (len $socialLinks) 0 -}}
-      <p class="contact-links">
-        {{- range $i, $l := $socialLinks -}}
-          {{- $name := $l.name | default "" -}}
-          {{- $url := $l.url | default "" -}}
-          {{- if and (ne $name "") (ne $url "") -}}
-            {{- if gt $i 0 }} | {{ end -}}
-            <a href="{{ $url }}" target="_blank" rel="noreferrer">{{ $name }}</a>
-          {{- end -}}
-        {{- end -}}
-      </p>
-    {{- end -}}
   </div>
 </section>
 
