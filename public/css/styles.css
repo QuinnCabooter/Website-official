@@ -55,6 +55,31 @@ body {
   flex-direction: column;
 }
 
+/* Bring homepage-like texture to inner pages, without overpowering content */
+body.page-inner {
+  position: relative;
+  isolation: isolate;
+}
+
+body.page-inner::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: linear-gradient(
+      180deg,
+      rgba(20, 34, 58, 0.62),
+      rgba(14, 22, 38, 0.14) 45%,
+      rgba(14, 22, 38, 0.55)
+    ),
+    url("/assets/hero-bg.svg");
+  background-size: auto, cover;
+  background-position: 0 0, center;
+  background-repeat: no-repeat;
+  opacity: 0.22;
+}
+
 main#home {
   flex: 1 0 auto;
 }

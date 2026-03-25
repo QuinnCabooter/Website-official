@@ -14,9 +14,9 @@
       rel="stylesheet"
     />
     <!-- Cache-bust during development so CSS updates always apply on reload -->
-    <link rel="stylesheet" href="/css/styles.css?v=20260325-9" />
+    <link rel="stylesheet" href="/css/styles.css?v=20260325-10" />
   </head>
-  <body>
+  <body class="{{ if .IsHome }}page-home{{ else }}page-inner{{ end }}">
     {{ partial "header.html" . }}
     <main id="home">
       {{ block "main" . }}{{ end }}
