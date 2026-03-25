@@ -1,0 +1,43 @@
+{{ define "main" }}
+{{ $profile := site.Data.profile }}
+<section class="hero section">
+  <div class="container hero-grid">
+    <div>
+      <p class="eyebrow">{{ $profile.eyebrow }}</p>
+      <h1>{{ $profile.headline }}</h1>
+      <p class="bio-intro">{{ $profile.bio_intro }}</p>
+      <p class="lead">{{ $profile.lead }}</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/publications/">View Publications</a>
+        <a class="btn btn-secondary" href="/research/">Research</a>
+        <a class="btn btn-secondary" href="/assets/cv.pdf">Download CV</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <img src="{{ $profile.portrait }}" alt="{{ $profile.portrait_alt }}" />
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container narrow">
+    <h2>About</h2>
+    <p>{{ $profile.about }}</p>
+    <h2>Explore</h2>
+    <div class="cards cards-2">
+      <article class="card">
+        <h3><a href="/research/">Research</a></h3>
+        <p>Blog-style updates and research notes.</p>
+      </article>
+      <article class="card">
+        <h3><a href="/publications/">Publications</a></h3>
+        <p>Titles and abstracts with links to the full text.</p>
+      </article>
+      <article class="card">
+        <h3><a href="/contact/">Contact</a></h3>
+        <p>How to reach me for collaborations and questions.</p>
+      </article>
+    </div>
+  </div>
+</section>
+{{ end }}

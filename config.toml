@@ -1,0 +1,9 @@
+baseURL = "https://example.netlify.app/"
+languageCode = "en-us"
+title = "Quinn Cabooter | Academic Website"
+disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT"]
+
+[params]
+description = "Academic website of Quinn Cabooter: about, research, publications, and contact."
+author = "Quinn Cabooter"
+lastUpdated = "March 2026"

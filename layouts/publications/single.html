@@ -1,0 +1,27 @@
+{{ define "main" }}
+<section class="section publication-detail">
+  <div class="container narrow">
+    {{ $subtitleParts := slice }}
+    {{ with .Params.venue }}{{ $subtitleParts = $subtitleParts | append . }}{{ end }}
+    {{ with .Date }}{{ $subtitleParts = $subtitleParts | append (.Format "2006") }}{{ end }}
+    {{ $subtitle := delimit $subtitleParts " · " }}
+    {{ partial "page_title.html" (dict "ctx" . "title" .Title "subtitle" $subtitle) }}
+
+    {{ with .Params.authors }}<p class="pub-meta pub-authors">{{ . }}</p>{{ end }}
+    {{ with .Params.link }}
+      <p class="pub-open"><a href="{{ . }}" target="_blank" rel="noreferrer">Open publication</a></p>
+    {{ end }}
+  </div>
+</section>
+
+<section class="section section-alt publication-detail__abstract">
+  <div class="container narrow">
+    <h2>Abstract</h2>
+    {{ with .Params.abstract }}
+      <p class="publication-abstract">{{ . }}</p>
+    {{ else }}
+      <p class="publication-abstract">No abstract added yet.</p>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

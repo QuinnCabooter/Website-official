@@ -1,0 +1,11 @@
+{{/* Usage: {{ partial "page_title.html" (dict "ctx" . "title" "My Title" "subtitle" "Optional subtitle") }} */}}
+{{ $ctx := .ctx }}
+{{ $title := .title }}
+{{ $subtitle := .subtitle }}
+
+<div class="page-title">
+  <div>
+    <h1 class="page-title__h1">{{ $title }}</h1>
+    {{ with $subtitle }}<p class="page-title__subtitle">{{ . }}</p>{{ end }}
+  </div>
+</div>

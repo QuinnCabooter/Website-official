@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="{{ .Site.Params.description }}" />
+    <title>{{ .Site.Title }}</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Cache-bust during development so CSS updates always apply on reload -->
+    <link rel="stylesheet" href="/css/styles.css?v=20260325" />
+  </head>
+  <body>
+    {{ partial "header.html" . }}
+    <main id="home">
+      {{ block "main" . }}{{ end }}
+    </main>
+    {{ partial "footer.html" . }}
+    <script src="/js/site.js" defer></script>
+  </body>
+</html>

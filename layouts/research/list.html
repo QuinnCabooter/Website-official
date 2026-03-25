@@ -1,0 +1,21 @@
+{{ define "main" }}
+<section class="section">
+  <div class="container narrow">
+    {{ partial "page_title.html" (dict "ctx" . "title" .Title "subtitle" (.Content | plainify)) }}
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="cards">
+      {{ range .Pages.ByDate.Reverse }}
+      <article class="card">
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p class="pub-meta">{{ .Date.Format "Jan 2, 2006" }}</p>
+        {{ with .Params.summary }}<p>{{ . }}</p>{{ end }}
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

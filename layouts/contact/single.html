@@ -1,0 +1,22 @@
+{{ define "main" }}
+{{ $contact := site.Data.contact }}
+<section class="section">
+  <div class="container narrow">
+    {{ partial "page_title.html" (dict "ctx" . "title" .Title "subtitle" (.Content | plainify)) }}
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container narrow">
+    <p>{{ $contact.message }}</p>
+    <p>
+      <a href="mailto:{{ $contact.email }}">{{ $contact.email }}</a> |
+      <a href="{{ $contact.researchgate }}" target="_blank" rel="noreferrer">ResearchGate</a> |
+      <a href="{{ $contact.osf }}" target="_blank" rel="noreferrer">OSF</a> |
+      <a href="{{ $contact.orcid }}" target="_blank" rel="noreferrer">ORCID</a> |
+      <a href="{{ $contact.github }}" target="_blank" rel="noreferrer">GitHub</a> |
+      <a href="{{ $contact.linkedin }}" target="_blank" rel="noreferrer">LinkedIn</a>
+    </p>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,8 @@
+{{ define "main" }}
+<section class="section">
+  <div class="container narrow">
+    {{ partial "page_title.html" (dict "ctx" . "title" .Title "subtitle" (.Date.Format "Jan 2, 2006")) }}
+    {{ if .Content }}<div>{{ .Content }}</div>{{ end }}
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,81 @@
+{{ define "main" }}
+<section class="section">
+  <div class="container narrow">
+    {{ partial "page_title.html" (dict "ctx" . "title" .Title "subtitle" (.Content | plainify)) }}
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    {{/* Build tag list for filter */}}
+    {{ $allTags := slice }}
+    {{ range .Pages }}
+      {{ with .Params.tags }}
+        {{ range . }}
+          {{ $allTags = $allTags | append . }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    {{ $allTags = sort (uniq $allTags) }}
+
+    <div class="section-heading">
+      <h2>Overview</h2>
+      <div>
+        <label for="pub-filter"><span class="pub-meta">Filter by topic</span></label>
+        <select id="pub-filter" aria-label="Filter publications by tag">
+          <option value="*">All</option>
+          {{ range $allTags }}
+            <option value="{{ . }}">{{ . }}</option>
+          {{ end }}
+        </select>
+      </div>
+    </div>
+
+    <div class="cards" id="pub-cards">
+      {{ range .Pages.ByDate.Reverse }}
+      {{ $tagAttr := "" }}
+      {{ with .Params.tags }}
+        {{ $tagAttr = delimit . "|" }}
+      {{ end }}
+
+      {{/* Full author list; bold your name */}}
+      {{ $authorsRaw := .Params.authors | default "" }}
+      {{ $quinn := "Quinn Cabooter" }}
+      {{ $authorsShort := replace $authorsRaw $quinn (printf "<strong>%s</strong>" $quinn) }}
+
+      <article class="card pub-card" data-tags="{{ $tagAttr }}">
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        {{ if $authorsShort }}<p class="pub-meta">{{ $authorsShort | safeHTML }}</p>{{ end }}
+        <p class="pub-meta">
+          {{ with .Params.venue }}{{ . }}{{ end }}
+          {{ with .Date }} · {{ .Format "2006" }}{{ end }}
+        </p>
+
+        {{ with .Params.abstract }}
+          <p class="pub-abstract">{{ . | truncate 260 }}</p>
+        {{ end }}
+
+        <p class="pub-links">
+          <a href="{{ .RelPermalink }}">Abstract & details</a>
+          {{ with .Params.link }}
+            · <a href="{{ . }}" target="_blank" rel="noreferrer">Open</a>
+          {{ end }}
+          {{ with .Params.links }}
+            {{ range . }}
+              · <a href="{{ .url }}" target="_blank" rel="noreferrer">{{ .name }}</a>
+            {{ end }}
+          {{ end }}
+        </p>
+
+        {{ with .Params.pub_type }}<span class="tag">{{ . }}</span>{{ end }}
+        {{ with .Params.tags }}
+          {{ range . }}
+            <span class="tag">{{ . }}</span>
+          {{ end }}
+        {{ end }}
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
