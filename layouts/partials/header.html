@@ -3,10 +3,15 @@
     <a class="brand" href="/">{{ .Site.Params.author }}</a>
     <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">Menu</button>
     <ul id="nav-list" class="nav-list">
-      <li><a href="/">About</a></li>
-      <li><a href="/research/">Research</a></li>
-      <li><a href="/publications/">Publications</a></li>
-      <li><a href="/contact/">Contact</a></li>
+      {{ $p := .RelPermalink }}
+      <li><a href="/" {{ if eq $p "/" }}aria-current="page"{{ end }}>About</a></li>
+      <li>
+        <a href="/research/" {{ if or (hasPrefix $p "/research/") (eq $p "/research/") }}aria-current="page"{{ end }}>Research</a>
+      </li>
+      <li>
+        <a href="/publications/" {{ if or (hasPrefix $p "/publications/") (eq $p "/publications/") }}aria-current="page"{{ end }}>Publications</a>
+      </li>
+      <li><a href="/contact/" {{ if eq $p "/contact/" }}aria-current="page"{{ end }}>Contact</a></li>
     </ul>
   </nav>
 </header>

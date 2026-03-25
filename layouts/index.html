@@ -2,15 +2,38 @@
 {{ $profile := site.Data.profile }}
 <section class="hero section">
   <div class="container hero-grid">
-    <div>
+    <div class="hero-copy">
       <p class="eyebrow">{{ $profile.eyebrow }}</p>
       <h1>{{ $profile.headline }}</h1>
       <p class="bio-intro">{{ $profile.bio_intro }}</p>
       <p class="lead">{{ $profile.lead }}</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="/publications/">View Publications</a>
-        <a class="btn btn-secondary" href="/research/">Research</a>
-        <a class="btn btn-secondary" href="/assets/cv.pdf">Download CV</a>
+        <a class="btn btn-primary" href="/publications/">
+          View Publications
+          <span class="btn__icon" aria-hidden="true">
+            <svg viewBox="0 0 20 20" fill="none">
+              <path d="M7.5 4.5L13 10l-5.5 5.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </a>
+        <a class="btn btn-secondary" href="/research/">
+          Research
+          <span class="btn__icon" aria-hidden="true">
+            <svg viewBox="0 0 20 20" fill="none">
+              <path d="M7.5 4.5L13 10l-5.5 5.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </a>
+        <a class="btn btn-tertiary" href="/assets/cv.pdf">
+          Download CV
+          <span class="btn__icon" aria-hidden="true">
+            <svg viewBox="0 0 20 20" fill="none">
+              <path d="M10 3.8v8.4" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>
+              <path d="M6.8 9.7L10 12.9l3.2-3.2" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M4.8 16.2h10.4" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </a>
       </div>
     </div>
     <div class="hero-card">
