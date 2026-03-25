@@ -92,6 +92,19 @@ h3 {
   margin: 0 0 0.75rem;
 }
 
+/* Tighten spacing in the homepage hero text */
+.hero h1 {
+  margin-bottom: 0.55rem;
+}
+
+.hero .bio-intro {
+  margin-bottom: 0.5rem;
+}
+
+.hero .lead {
+  margin-top: 0;
+}
+
 h1 {
   font-size: clamp(2rem, 3.8vw, 3.2rem);
 }
@@ -116,6 +129,15 @@ a:hover {
 
 .narrow {
   width: min(760px, 100%);
+}
+
+/* Homepage: reduce left/right margins (wider content) */
+body.page-home main#home .container {
+  width: min(1150px, 96%);
+}
+
+body.page-home main#home .container.narrow {
+  width: min(900px, 96%);
 }
 
 .section {
@@ -171,12 +193,29 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 10;
-  backdrop-filter: blur(10px);
-  background: linear-gradient(
-    180deg,
-    rgba(20, 34, 58, 0.72),
-    rgba(14, 22, 38, 0.62)
-  );
+  backdrop-filter: blur(5px);
+  /* Match the site-wide body gradient so the header looks consistent
+     even when it sits over the homepage hero background. */
+  background-color: rgba(14, 22, 38, 0.72);
+  background-image: linear-gradient(
+      180deg,
+      rgba(20, 34, 58, 0.72),
+      rgba(81, 90, 110, 0.361) 42%,
+      rgba(33, 45, 68, 0.894)
+    ),
+    radial-gradient(
+      1200px 700px at 70% 12%,
+      rgba(156, 191, 255, 0.14),
+      rgba(14, 22, 38, 0) 64%
+    ),
+    radial-gradient(
+      900px 600px at 15% 85%,
+      rgba(127, 166, 230, 0.10),
+      rgba(14, 22, 38, 0) 64%
+    );
+  background-size: auto, auto, auto;
+  background-position: 0 0, 0 0, 0 0;
+  background-repeat: no-repeat;
   border-bottom: 1px solid var(--border);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
   overflow: hidden;
@@ -185,18 +224,34 @@ a:hover {
 .site-header::before {
   content: "";
   position: absolute;
-  left: -20%;
-  right: -20%;
+  left: -0%;
+  right: -0%;
   top: 0;
-  height: 3px;
+  height: 1px;
   background: linear-gradient(
     90deg,
-    rgba(127, 166, 230, 0),
-    rgba(127, 166, 230, 0.38),
-    rgba(156, 191, 255, 0.30),
-    rgba(127, 166, 230, 0)
+    rgb(255, 0, 0),
+    rgb(0, 0, 255),
+    rgb(0, 255, 0)
   );
   opacity: 0.65;
+  pointer-events: none;
+}
+
+.site-header::after {
+  content: "";
+  position: absolute;
+  left: -0%;
+  right: -0%;
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgb(0, 255, 0),
+    rgb(0, 0, 255),
+    rgb(255, 0, 0)
+  );
+  opacity: 0.45;
   pointer-events: none;
 }
 
@@ -273,9 +328,9 @@ a:hover {
 
 .eyebrow {
   text-transform: uppercase;
-  font-size: 0.78rem;
+  font-size: 0.95rem;
   letter-spacing: 0.08em;
-  color: var(--brand);
+  color: rgb(9, 52, 120);
   font-weight: 700;
 }
 
@@ -313,7 +368,7 @@ a:hover {
 }
 
 .btn-primary {
-  background: var(--brand);
+  background: rgb(30,100,200);
   color: #fff;
 }
 
