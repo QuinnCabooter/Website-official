@@ -7,3 +7,9 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT"]
 description = "Academic website of Quinn Cabooter: about, research, publications, and contact."
 author = "Quinn Cabooter"
 lastUpdated = "March 2026"
+
+# Centralized “edit-me” knobs (kept in config so templates stay generic).
+# These defaults preserve the current rendered output exactly.
+assetVersion = "20260325"
+cssVersion = "20260325-30"
+highlightAuthor = "Quinn Cabooter"

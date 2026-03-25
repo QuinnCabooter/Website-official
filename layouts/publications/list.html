@@ -46,8 +46,8 @@
 
       {{/* Full author list; bold your name */}}
       {{ $authorsRaw := .Params.authors | default "" }}
-      {{ $quinn := "Quinn Cabooter" }}
-      {{ $authorsShort := replace $authorsRaw $quinn (printf "<strong>%s</strong>" $quinn) }}
+      {{ $highlight := site.Params.highlightAuthor | default "Quinn Cabooter" }}
+      {{ $authorsShort := replace $authorsRaw $highlight (printf "<strong>%s</strong>" $highlight) }}
 
       <article class="card pub-card" data-tags="{{ $tagAttr }}">
         <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>

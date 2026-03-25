@@ -14,4 +14,7 @@
     {{ if .Content }}<div>{{ .Content }}</div>{{ end }}
   </div>
 </section>
+{{ if eq .Params.pageType "contact" }}
+  {{ partial "contact/contact-form.html" . }}
+{{ end }}
 {{ end }}

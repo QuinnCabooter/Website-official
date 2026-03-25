@@ -6,11 +6,13 @@
     <meta name="description" content="{{ .Site.Params.description }}" />
     <title>{{ .Site.Title }}</title>
     <!-- Favicons (prefer PNG; add cache-bust so browsers pick up updates) -->
-    <link rel="shortcut icon" type="image/png" href="/assets/image.png?v=20260325" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/image.png?v=20260325" />
-    <link rel="icon" type="image/png" sizes="512x512" href="/assets/image.png?v=20260325" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/image.png?v=20260325" />
-    <link rel="icon" type="image/png" sizes="512x512" href="/assets/icon.png?v=20260325" />
+    {{- $assetV := .Site.Params.assetVersion | default "20260325" -}}
+    {{- $cssV := .Site.Params.cssVersion | default "20260325-30" -}}
+    <link rel="shortcut icon" type="image/png" href="/assets/image.png?v={{ $assetV }}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/image.png?v={{ $assetV }}" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/image.png?v={{ $assetV }}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/image.png?v={{ $assetV }}" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/icon.png?v={{ $assetV }}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,7 +20,7 @@
       rel="stylesheet"
     />
     <!-- Cache-bust during development so CSS updates always apply on reload -->
-    <link rel="stylesheet" href="/css/styles.css?v=20260325-30" />
+    <link rel="stylesheet" href="/css/styles.css?v={{ $cssV }}" />
   </head>
   <body class="{{ if .IsHome }}page-home{{ else }}page-inner{{ end }}">
     {{ partial "header.html" . }}

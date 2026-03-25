@@ -20,6 +20,19 @@ hugo server --disableFastRender
 
 Tip: if you only changed a static file (CSS/JS), a hard reload is usually enough.
 
+### Optional: convenience commands
+
+If you have `make` available:
+
+```bash
+make serve
+make build
+make new-conference NAME=my-talk
+make new-experience NAME=my-role
+make new-publication NAME=my-paper
+make new-research NAME=my-note
+```
+
 ## Deploy to Netlify
 
 1. Push this repo to GitHub.
@@ -35,6 +48,11 @@ Netlify settings are captured in `netlify.toml` (notably the HTTP headers).
 ### Configuration
 - `config.toml`: site metadata (title/description/author), and build settings.
 
+Key “edit-me” params (kept here so templates stay generic):
+- `params.assetVersion`: cache-bust for favicons (default keeps current output)
+- `params.cssVersion`: cache-bust for `/css/styles.css` (default keeps current output)
+- `params.highlightAuthor`: the author name to bold on publication cards (default keeps current output)
+
 ### Templates
 - `layouts/_default/baseof.html`: the global HTML shell. It loads:
   - fonts (Google Fonts)
@@ -47,7 +65,9 @@ Netlify settings are captured in `netlify.toml` (notably the HTTP headers).
 - `layouts/publications/single.html`: the publication detail page.
 - `layouts/research/list.html`: the research list page (cards).
 - `layouts/research/single.html`: the research detail page.
-- `layouts/contact/single.html`: contact page.
+- Contact page:
+  - `content/contact.md` renders via `layouts/_default/single.html` when `pageType = "contact"`.
+  - `layouts/contact/single.html` exists as an alternative layout, but the default in this repo is the `pageType` approach above.
 
 ### Content
 The `content/` folder provides actual pages (Hugo “page resources”) and section indexes:
@@ -56,12 +76,32 @@ The `content/` folder provides actual pages (Hugo “page resources”) and sect
 - `content/publications/*.md`: one Markdown page per publication (front matter drives the list card + detail view).
 - `content/research/_index.md`: “Research” section title stub.
 - `content/research/*.md`: research notes/pages (front matter drives the list cards).
-- `content/contact.md`: contact page title + optional body text (the contact links/details come from YAML).
+- `content/contact.md`: contact page title + optional body text.
 
 ### Data (YAML)
 YAML in `data/` is loaded via `site.Data...`:
 - `data/profile.yaml`: hero/about content used on the home page (`layouts/index.html`).
-- `data/contact.yaml`: email + external profile links used on the contact page (`layouts/contact/single.html`).
+- `data/contact.yaml`: message + external profile links used on the contact page.
+
+Note: the contact *form* is what you submit to. The actual email address is intentionally not rendered in the HTML to reduce spam/scams.
+
+Social links support two formats:
+
+1) Simple keys (current format; preserves existing output)
+- `email` (optional; not rendered), `researchgate`, `osf`, `orcid`, `github`, `linkedin`
+
+2) Ordered list (optional)
+
+```yaml
+message: "..."
+links:
+  - type: "email"
+    value: "name@domain.com"
+  - name: "OSF"
+    url: "https://..."
+  - name: "ORCID"
+    url: "https://..."
+```
 
 ### Assets / styling / behavior
 - CSS: `static/css/styles.css`
@@ -124,13 +164,29 @@ Research pages are under `content/research/*.md`.
 
 `content/contact.md` provides the section title and optional body.
 
-`layouts/contact/single.html` loads the actual contact links from:
-- `data/contact.yaml` (`email`, `orcid`, `github`, `linkedin`, etc.)
+The contact page:
+- renders a Netlify Form named `contact` (`data-netlify="true"`) so your email address does not appear in the page HTML
+- renders social links from `data/contact.yaml` (ResearchGate/OSF/ORCID/GitHub/LinkedIn)
+
+Netlify setup: in your Netlify site UI, configure the form notification/recipient for the form with name `contact`.
+
+## Create new pages (archetypes)
+
+This repo includes Hugo archetypes in `archetypes/` so new content starts with the right front matter fields.
+
+Examples:
+
+```bash
+hugo new conferences/my-talk.md
+hugo new experience/my-role.md
+hugo new publications/my-paper.md
+hugo new research/my-note.md
+```
 
 ## Notes about CSS updates during development
 
 During development, browsers can sometimes reuse a cached `styles.css` even after Hugo rebuilds.
 
 To make spacing changes reliable, `layouts/_default/baseof.html` loads CSS with a query-string version:
-- `/css/styles.css?v=20260325`
+- `/css/styles.css?v={{ .Site.Params.cssVersion }}`
 
