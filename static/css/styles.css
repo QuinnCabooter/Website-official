@@ -252,6 +252,26 @@ select {
   object-fit: cover;
 }
 
+.page-title-avatar {
+  margin-right: 1.25rem;
+}
+
+/* Page section titles (Research/Publications list): icon on the left */
+.section-title-wrap {
+  position: relative;
+}
+
+.section-title-icon {
+  position: absolute;
+  left: -140px;
+  top: 0.15rem;
+  width: 100px;px;
+  height: 100px;
+  border-radius: 0.9rem; /* more square-ish */
+  border: 1px solid var(--border);
+  object-fit: cover;
+}
+
 .page-title__h1 {
   margin: 0;
 }
