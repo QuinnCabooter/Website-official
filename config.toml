@@ -6,7 +6,7 @@ buildFuture = true
 
 [params]
 description = "Academic website of Quinn Cabooter: about, research, publications, and contact."
-author = "Quinn Cabooter"
+author = "Quinn Cabooter - PhD Researcher"
 lastUpdated = "March 2026"
 
 # Centralized “edit-me” knobs (kept in config so templates stay generic).
