@@ -4,7 +4,7 @@ date: 2022-12-15
 summary: "During my internship at the University of Amsterdam, I contributed to a validation study of online webcam-based eye tracking (WebGazer.js), replicating classic paradigms such as the cascade effect, novelty preference, and the visual world paradigm."
 ---
 
-During my internship at the University of Amsterdam, I contributed to the paper *“The validation of online webcam-based eye-tracking: The replication of the cascade effect, the novelty preference, and the visual world paradigm”* (submitted).
+During my internship at the University of Amsterdam, I contributed to the paper *“The validation of online webcam-based eye-tracking: The replication of the cascade effect, the novelty preference, and the visual world paradigm”* (Published).
 
 My contributions included:
 
