@@ -21,7 +21,7 @@
     <div class="cards">
       {{ range (sort .Pages "Params.date_start" "desc") }}
       <article class="card exp-card">
-        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <h3>{{ .Title }}</h3>
         <p class="pub-meta">
           {{ with .Params.company }}<span class="exp-company">{{ . }}</span>{{ end }}
           {{ with .Params.location }} · <span class="exp-location">{{ . }}</span>{{ end }}
@@ -31,6 +31,7 @@
           {{ with .Params.date_end }} – {{ (time .).Format "Jan 2006" }}{{ else }} – Present{{ end }}
         </p>
         {{ with .Params.summary }}<p>{{ . }}</p>{{ end }}
+        {{ if .Content }}<div class="exp-details">{{ .Content }}</div>{{ end }}
       </article>
       {{ end }}
     </div>

@@ -72,6 +72,8 @@ Key “edit-me” params (kept here so templates stay generic):
 ### Content
 The `content/` folder provides actual pages (Hugo “page resources”) and section indexes:
 - `content/_index.md`: the home route (“Home” title stub; home content is mostly from `data/profile.yaml`).
+- `content/experience/_index.md`: “Experience” section intro text (and build settings for how roles appear).
+- `content/experience/*.md`: one Markdown page per role/job; these are rendered inline on the main Experience page (not as separate detail pages).
 - `content/publications/_index.md`: “Publications” section intro text.
 - `content/publications/*.md`: one Markdown page per publication (front matter drives the list card + detail view).
 - `content/research/_index.md`: “Research” section title stub.
@@ -159,6 +161,17 @@ Research pages are under `content/research/*.md`.
 `layouts/research/list.html` renders each child page as a card and expects:
 - `date` (for sorting)
 - `summary` (optional; displayed as the paragraph under the title)
+
+## Experience
+
+Experience entries are under `content/experience/*.md`.
+
+The Experience page (`layouts/experience/list.html`) renders each role as a card and shows:
+- `title`, `company`, `location`, `date_start`, `date_end`
+- optional `summary`
+- the Markdown body (use this for responsibilities and notes)
+
+Individual role pages are intentionally not generated (so roles don’t create separate URLs).
 
 ## Contact
 
