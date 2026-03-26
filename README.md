@@ -170,8 +170,7 @@ The Experience page (`layouts/experience/list.html`) renders each role as a card
 - `title`, `company`, `location`, `date_start`, `date_end`
 - optional `summary`
 - the Markdown body (use this for responsibilities and notes)
-
-Individual role pages are intentionally not generated (so roles don’t create separate URLs).
+Role cards do not link out; all key details are shown directly on the main Experience page.
 
 ## Contact
 
