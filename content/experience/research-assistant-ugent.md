@@ -1,7 +1,6 @@
 ---
 title: "Research assistant"
 date: 2022-10-01
-summary: "Ghent University · Ghent · Oct 2022 – Oct 2023"
 company: "Ghent University"
 location: "Ghent"
 date_start: 2022-10-01
