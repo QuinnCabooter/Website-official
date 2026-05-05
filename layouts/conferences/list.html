@@ -14,8 +14,19 @@
 <section class="section section-alt">
   <div class="container">
     {{ $now := now }}
-    {{ $upcoming := where .Pages "Date" "ge" $now }}
-    {{ $past := where .Pages "Date" "lt" $now }}
+    {{ $upcoming := slice }}
+    {{ $past := slice }}
+    {{ range .Pages }}
+      {{ $endDate := .Date }}
+      {{ with .Params.date_end }}
+        {{ $endDate = time . }}
+      {{ end }}
+      {{ if ge $endDate $now }}
+        {{ $upcoming = $upcoming | append . }}
+      {{ else }}
+        {{ $past = $past | append . }}
+      {{ end }}
+    {{ end }}
 
     <div class="section-heading">
       <h2>Upcoming</h2>
@@ -24,13 +35,18 @@
 
     {{ if gt (len $upcoming) 0 }}
       <div class="cards">
-        {{ range $upcoming.ByDate }}
+        {{ range sort $upcoming "Date" "asc" }}
+        {{ $page := . }}
         <article class="card conf-card conf-card--upcoming">
           <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          {{ $dateLabel := .Date.Format "Jan 2, 2006" }}
+          {{ with .Params.date_end }}
+            {{ $dateLabel = printf "%s to %s" ($page.Date.Format "Jan 2, 2006") ((time .).Format "Jan 2, 2006") }}
+          {{ end }}
           <p class="pub-meta">
             <span class="tag conf-status">Upcoming</span>
             {{ with .Params.venue }}<span class="conf-venue">{{ . }}</span>{{ end }}
-            {{ with .Date }} · {{ .Format "Jan 2, 2006" }}{{ end }}
+            · {{ $dateLabel }}
           </p>
           {{ with .Params.summary }}<p>{{ . }}</p>{{ end }}
           {{ with .Params.link }}
@@ -50,12 +66,17 @@
 
     {{ if gt (len $past) 0 }}
       <div class="cards">
-        {{ range $past.ByDate.Reverse }}
+        {{ range sort $past "Date" "desc" }}
+        {{ $page := . }}
         <article class="card conf-card">
           <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          {{ $dateLabel := .Date.Format "Jan 2, 2006" }}
+          {{ with .Params.date_end }}
+            {{ $dateLabel = printf "%s to %s" ($page.Date.Format "Jan 2, 2006") ((time .).Format "Jan 2, 2006") }}
+          {{ end }}
           <p class="pub-meta">
             {{ with .Params.venue }}<span class="conf-venue">{{ . }}</span>{{ end }}
-            {{ with .Date }} · {{ .Format "Jan 2, 2006" }}{{ end }}
+            · {{ $dateLabel }}
           </p>
           {{ with .Params.summary }}<p>{{ . }}</p>{{ end }}
           {{ with .Params.link }}

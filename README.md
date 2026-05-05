@@ -172,6 +172,46 @@ The Experience page (`layouts/experience/list.html`) renders each role as a card
 - the Markdown body (use this for responsibilities and notes)
 Role cards do not link out; all key details are shown directly on the main Experience page.
 
+## Conferences
+
+Conference entries are under `content/conferences/*.md`.
+
+Use these front matter fields:
+- `title`: conference or talk name.
+- `date`: first day of the event.
+- `date_end` (optional): last day of the event if it spans multiple days.
+- `venue`, `summary`, `link`: same meaning as other sections.
+
+Simple one-day example:
+
+```yaml
+---
+title: "Example Conference"
+date: 2026-05-22
+venue: "City, Country"
+summary: "What you are presenting and why it matters."
+link: "https://example.org"
+---
+```
+
+Multi-day example:
+
+```yaml
+---
+title: "XR Salento"
+date: 2026-06-16
+date_end: 2026-06-20
+venue: "Otranto, Italy"
+summary: "Short plain-language summary of the contribution."
+link: "https://www.xrsalento.it"
+---
+```
+
+How this is shown on the site:
+- If only `date` exists, the site shows one date.
+- If `date_end` is added, the site shows a date range like `Jun 16, 2026 to Jun 20, 2026`.
+- Upcoming vs past is based on the end date when `date_end` is present.
+
 ## Contact
 
 `content/contact.md` provides the section title and optional body.
