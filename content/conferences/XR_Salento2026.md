@@ -2,7 +2,7 @@
 title: "XR Salento: International Conference on eXtended Reality"
 date: 2026-06-16
 date_end: 2026-06-20
-summary: "Short description of the talk, topic, and why it matters."
+summary: 
 venue: "Basiliani Resort & SPA (Otranto, Italy)"
 status: "Upcoming"
 link: "https://www.xrsalento.it"
