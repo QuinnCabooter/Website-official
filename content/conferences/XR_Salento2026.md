@@ -4,7 +4,6 @@ date: 2026-06-16
 date_end: 2026-06-20
 summary: 
 venue: "Basiliani Resort & SPA (Otranto, Italy)"
-status: "Upcoming"
 link: "https://www.xrsalento.it"
 ---
 Oral presentation:

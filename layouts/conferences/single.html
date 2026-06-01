@@ -1,12 +1,5 @@
 {{ define "main" }}
-{{ $dateLabel := .Date.Format "Jan 2, 2006" }}
-{{ with .Params.date_end }}
-  {{ $dateLabel = printf "%s to %s" ($.Date.Format "Jan 2, 2006") ((time .).Format "Jan 2, 2006") }}
-{{ end }}
-{{ $endDate := .Date }}
-{{ with .Params.date_end }}
-  {{ $endDate = time . }}
-{{ end }}
+{{ $dates := partial "conference_dates.html" (dict "page" .) }}
 <section class="section">
   <div class="container narrow section-title-wrap">
     <img
@@ -15,16 +8,20 @@
       alt=""
       aria-hidden="true"
     />
-    {{ partial "page_title.html" (dict "ctx" . "title" .Title "subtitle" $dateLabel) }}
+    {{ partial "page_title.html" (dict "ctx" . "title" .Title "subtitle" $dates.dateLabel) }}
 
-    <div class="pub-meta">
-      {{ if ge $endDate now }}<span class="tag conf-status">Upcoming</span>{{ end }}
+    <div
+      class="pub-meta"
+      id="conference-detail-meta"
+      data-date-start="{{ .Date.Format "2006-01-02" }}"
+      data-date-end="{{ $dates.endDay }}"
+    >
+      {{ if gt $dates.endDate now }}<span class="tag conf-status">Upcoming</span>{{ end }}
       {{ with .Params.venue }}<span class="conf-venue">{{ . }}</span>{{ end }}
-      {{ with .Params.link }} · <a href="{{ . }}" target="_blank" rel="noreferrer">Conference link</a>{{ end }}
+      {{ with .Params.link }} · <a href="{{ . }}" target="_blank" rel="noreferrer">Conference website</a>{{ end }}
     </div>
 
     {{ if .Content }}<div class="publication-detail__abstract">{{ .Content }}</div>{{ end }}
   </div>
 </section>
 {{ end }}
-

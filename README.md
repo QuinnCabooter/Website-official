@@ -210,7 +210,8 @@ link: "https://www.xrsalento.it"
 How this is shown on the site:
 - If only `date` exists, the site shows one date.
 - If `date_end` is added, the site shows a date range like `Jun 16, 2026 to Jun 20, 2026`.
-- Upcoming vs past is based on the end date when `date_end` is present.
+- Upcoming vs past uses the last day of the event (`date_end`, or `date` for one-day events).
+- The conferences page also updates in the browser using your local date, so entries move to Past after the event even before you redeploy.
 
 ## Contact
 

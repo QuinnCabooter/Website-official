@@ -11,84 +11,68 @@
   </div>
 </section>
 
-<section class="section section-alt">
+<section class="section section-alt" id="conferences-list">
   <div class="container">
     {{ $now := now }}
-    {{ $upcoming := slice }}
-    {{ $past := slice }}
-    {{ range .Pages }}
-      {{ $endDate := .Date }}
-      {{ with .Params.date_end }}
-        {{ $endDate = time . }}
-      {{ end }}
-      {{ if ge $endDate $now }}
-        {{ $upcoming = $upcoming | append . }}
-      {{ else }}
-        {{ $past = $past | append . }}
-      {{ end }}
-    {{ end }}
 
     <div class="section-heading">
       <h2>Upcoming</h2>
       <div></div>
     </div>
 
-    {{ if gt (len $upcoming) 0 }}
-      <div class="cards">
-        {{ range sort $upcoming "Date" "asc" }}
-        {{ $page := . }}
-        <article class="card conf-card conf-card--upcoming">
+    <div class="cards" id="conf-upcoming-cards" data-conf-section="upcoming">
+      {{ range .Pages.ByDate }}
+        {{ $dates := partial "conference_dates.html" (dict "page" .) }}
+        {{ if gt $dates.endDate $now }}
+        <article
+          class="card conf-card conf-card--upcoming"
+          data-date-start="{{ .Date.Format "2006-01-02" }}"
+          data-date-end="{{ $dates.endDay }}"
+        >
           <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-          {{ $dateLabel := .Date.Format "Jan 2, 2006" }}
-          {{ with .Params.date_end }}
-            {{ $dateLabel = printf "%s to %s" ($page.Date.Format "Jan 2, 2006") ((time .).Format "Jan 2, 2006") }}
-          {{ end }}
           <p class="pub-meta">
             <span class="tag conf-status">Upcoming</span>
             {{ with .Params.venue }}<span class="conf-venue">{{ . }}</span>{{ end }}
-            · {{ $dateLabel }}
+            · {{ $dates.dateLabel }}
           </p>
           {{ with .Params.summary }}<p>{{ . }}</p>{{ end }}
           {{ with .Params.link }}
-            <p class="pub-links"><a href="{{ . }}" target="_blank" rel="noreferrer">Details</a></p>
+            <p class="pub-links"><a href="{{ . }}" target="_blank" rel="noreferrer">Conference website</a></p>
           {{ end }}
         </article>
         {{ end }}
-      </div>
-    {{ else }}
-      <p class="empty-state">No upcoming conferences planned.</p>
-    {{ end }}
+      {{ end }}
+    </div>
+    <p class="empty-state" id="conf-upcoming-empty" hidden>No upcoming conferences planned.</p>
 
     <div class="section-heading" style="margin-top: 1.25rem;">
       <h2>Past</h2>
       <div></div>
     </div>
 
-    {{ if gt (len $past) 0 }}
-      <div class="cards">
-        {{ range sort $past "Date" "desc" }}
-        {{ $page := . }}
-        <article class="card conf-card">
+    <div class="cards" id="conf-past-cards" data-conf-section="past">
+      {{ range .Pages.ByDate.Reverse }}
+        {{ $dates := partial "conference_dates.html" (dict "page" .) }}
+        {{ if not (gt $dates.endDate $now) }}
+        <article
+          class="card conf-card"
+          data-date-start="{{ .Date.Format "2006-01-02" }}"
+          data-date-end="{{ $dates.endDay }}"
+        >
           <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-          {{ $dateLabel := .Date.Format "Jan 2, 2006" }}
-          {{ with .Params.date_end }}
-            {{ $dateLabel = printf "%s to %s" ($page.Date.Format "Jan 2, 2006") ((time .).Format "Jan 2, 2006") }}
-          {{ end }}
           <p class="pub-meta">
             {{ with .Params.venue }}<span class="conf-venue">{{ . }}</span>{{ end }}
-            · {{ $dateLabel }}
+            · {{ $dates.dateLabel }}
           </p>
           {{ with .Params.summary }}<p>{{ . }}</p>{{ end }}
           {{ with .Params.link }}
-            <p class="pub-links"><a href="{{ . }}" target="_blank" rel="noreferrer">Details</a></p>
+            <p class="pub-links"><a href="{{ . }}" target="_blank" rel="noreferrer">Conference website</a></p>
           {{ end }}
         </article>
         {{ end }}
-      </div>
-    {{ else }}
-      <p class="empty-state">No past conferences yet.</p>
-    {{ end }}
+      {{ end }}
+    </div>
+    <p class="empty-state" id="conf-past-empty" hidden>No past conferences yet.</p>
   </div>
 </section>
 {{ end }}
-
