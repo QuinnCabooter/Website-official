@@ -1,0 +1,12 @@
+{{/* Expects dict "page" (the conference page). Returns endDay (YYYY-MM-DD) and dateLabel. */}}
+{{ $page := .page }}
+{{ $endDay := $page.Date.Format "2006-01-02" }}
+{{ with $page.Params.date_end }}
+  {{ $endDay = . }}
+{{ end }}
+{{ $dateLabel := $page.Date.Format "Jan 2, 2006" }}
+{{ with $page.Params.date_end }}
+  {{ $dateLabel = printf "%s to %s" ($page.Date.Format "Jan 2, 2006") ((time .).Format "Jan 2, 2006") }}
+{{ end }}
+{{ $endDate := time (printf "%sT23:59:59" $endDay) }}
+{{ return (dict "endDay" $endDay "endDate" $endDate "dateLabel" $dateLabel) }}
